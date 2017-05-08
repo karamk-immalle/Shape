@@ -24,5 +24,15 @@ namespace WpfApplication8
         {
             InitializeComponent();
         }
+
+        private void drawButton_Click(object sender, RoutedEventArgs e)
+        {
+            Rectangle rect = new Rectangle();
+            rect.Stroke = new SolidColorBrush(Colors.Black);
+            rect.Width = 100;
+            rect.Height = 70;
+            rect.Margin = new Thickness(10, 10, 10, 0);
+            canvas.Children.Add(rect);
+        }
     }
 }
