@@ -27,12 +27,23 @@ namespace WpfApplication8
 
         private void drawButton_Click(object sender, RoutedEventArgs e)
         {
-            Rectangle rect = new Rectangle();
-            rect.Stroke = new SolidColorBrush(Colors.Black);
-            rect.Width = 100;
-            rect.Height = 70;
-            rect.Margin = new Thickness(10, 10, 10, 0);
-            canvas.Children.Add(rect);
+            //Rectangle rect = new Rectangle();
+            //rect.Stroke = new SolidColorBrush(Colors.Black);
+            //rect.Width = 100;
+            //rect.Height = 70;
+            //rect.Margin = new Thickness(10, 10, 10, 0);
+            //canvas.Children.Add(rect);
+            Circle circle = new Circle(40, 40);
+            Square squarel = new Square(180, 180);
+            List<Shape> group = new List<Shape>();
+
+            group.Add(circle);
+            group.Add(squarel);
+
+            foreach (Shape shape in group)
+            {
+                shape.DisplayOn(canvas);
+            }
         }
     }
 }
